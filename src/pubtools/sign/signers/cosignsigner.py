@@ -255,6 +255,7 @@ class CosignSigner(Signer):
             "--rekor-url",
             self.rekor_url,
             "--tlog-upload=%s" % ("true" if self.upload_tlog else "false"),
+            "-r",
         ]
         if self.registry_user:
             common_args += ["--registry-username", self.registry_user]
